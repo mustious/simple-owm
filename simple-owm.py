@@ -74,10 +74,8 @@ class CurrentWeather:
 
             # checks weather a request is 'OK' else raises an error
             if owm_request.status_code == 200:
-                print(owm_request.status_code)
                 owm_json = owm_request.json()
                 self.weather_json = owm_request.json()
-                print(owm_json)
                 return owm_json
 
             else:
